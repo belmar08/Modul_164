@@ -56,21 +56,19 @@ UNIQUE/Redundanz: Keine doppelten Werte
 
 ## Recap Modul 162: Normalisierung
 
-- **Ziel:** Struktur für Daten finden, um Datenbanken zu bauen
-- **Datenmodellierung ist Teil der Datenbankentwicklung**
+**Ziel:** Struktur für Daten finden, um Datenbanken zu bauen
 
 ### Drei Arten von Datenmodellen
 
-1. **Konzeptionelles Modell (ERM):**
-   - Fachlich, ohne Technik  
-   - Aus den Anforderungen
+1. **Konzeptionelles Modell**
 
-2. **Logisches Modell (ERD):**  
-   - Fachliches Modell + technische Infos (z. B. Schlüssel)
+    Es zeigt, welche Daten es gibt und wie sie zusammenhängen, aber ohne technische Details.
 
-3. **Physisches Modell:**  
-   - Mit Datenbank-Befehlen (z. B. `CREATE TABLE`)  
-   - Für die echte Datenbank
+2. **Logisches Modell**  
+   Übertragt das Konzept auf eine Datenbank mit Schlüsseln.
+
+3. **Physisches Modell**  
+   Hier steht, wie die Datenbank aufgebaut ist (Tabellen).
 
 ### Modellformen je nach Einsatz
 
@@ -78,13 +76,13 @@ UNIQUE/Redundanz: Keine doppelten Werte
 - **Star Schema:** für Auswertungen (z. B. Reporting)  
 - **Data Vault:** für flexible und automatisierte Systeme
 
-### Normalisierungsschritte (einfach erklärt)
+### Normalisierungsschritte
 
-1. **1NF:**  
-   - Keine Listen im Feld, alles klar getrennt
+1. **NF:**  
+   - Alle Felder enthalten nur einen Wert, oft keine Listen oder Gruppen. (unstrukturiert)
 
-2. **2NF:**  
-   - Jedes Datenfeld hängt nur vom ganzen Schlüssel ab
+2. **NF:**  
+   - Erfüllt 1NF und alle Felder hängen vollständig vom ganzen Primärschlüssel von 1. Normalform ab.
 
-3. **3NF:**  
-   - Es darf keine Abhängigkeiten zwischen Datenfeldern geben.
+3. **NF:**  
+   - In der 3. Normalform müssen die ersten zwei Normalformen erfüllt sein und alle Daten hängen nur vom Schlüssel ab nicht von normalen Daten.
