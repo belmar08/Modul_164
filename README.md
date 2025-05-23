@@ -86,3 +86,25 @@ UNIQUE/Redundanz: Keine doppelten Werte
 
 3. **NF:**  
    - In der 3. Normalform müssen die ersten zwei Normalformen erfüllt sein und alle Daten hängen nur vom Schlüssel ab nicht von normalen Daten.
+
+## Generalisierung
+
+In der Datenbankmodellierung werden gemeinsame Attribute mehrerer Entitätstypen in einem allgemeinen Entitätstyp zusammengefasst (Generalisierung), um Redundanzen zu vermeiden. Spezifische Attribute bleiben in spezialisierten Entitätstypen (Spezialisierung). Die spezialisierten Entitäten verweisen per Fremdschlüssel auf den allgemeinen Typ, was als „is_a“-Beziehung bezeichnet wird. Das entspricht der Vererbung in der objektorientierten Programmierung.
+
+![Generalisierung](Generalisierung.png)
+
+## Beziehungsarten: Indentifying / Non-Identifying Relationship
+
+Identifying Relationships sind Beziehungen, bei denen der Fremdschlüssel Teil des Primärschlüssels ist und zur eindeutigen Identifikation gehört. Bei Non-Identifying Relationships ist der Fremdschlüssel nur eine Referenz und kein Teil des Primärschlüssels, wodurch die Beziehung flexibler ist.
+
+![Beziehungsarten](Beziehungsarten_ü2.png)
+
+Obere Beziehung: Non-Identifying Relationship
+Untere Beziehung:  Identifying Relationship
+
+Ich habe das ganze mit Herr Wiesendanger angeschaut und ich habe mir neue respektiv andere Baspiele für Beziehungen angeschaut.
+Ein Beispiel währe z.B. Kunde zu Rechnung welche eine Non-Identifying Beziehung ist.
+
+## CREATE, ALTER, DROP
+
+[CREATE_ALTER_DROP](./CREATE_ALTER_DROP.sql)
